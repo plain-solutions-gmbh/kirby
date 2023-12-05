@@ -110,7 +110,8 @@ export default {
 				current: tab.name === this.current,
 				icon: tab.icon,
 				title: tab.label,
-				text: tab.label ?? tab.text ?? tab.name
+				text: tab.label ?? tab.text ?? tab.name,
+				click: () => this.$emit('click', tab.name)
 			};
 		},
 		async resize() {
